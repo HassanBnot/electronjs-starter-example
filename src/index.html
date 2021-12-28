@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Electron js starter example</title>
+    <link rel="stylesheet" href="index.css">
+  </head>
+  <body>
+    <style type="text/css">
+      h1{
+        font-size: 40px;
+        font-family: serif;
+      }
+        form{
+          
+          text-align: center;
+        }
+        input[type="text"]{
+          border-style: none;
+          font-size: 30px;
+        }
+        input[type="button"]{
+          size: 20px;
+          font-family: fantasy;
+          cursor: pointer;
+          width: 50%;
+          height: 50px;
+          margin-right: 70%;
+        }
+    </style>
+    <h1>This is a starter example</h1>
+    
+      <form>
+        <input type="text" id="number" value="0" disabled /> </br>
+     <input type="button" onclick="incrementValue()" value="Increase" />
+      </form>
+        
+   
+
+    <script>
+    function incrementValue()
+    {
+        var value = parseInt(document.getElementById('number').value, 10);
+        value = isNaN(value) ? 0 : value;
+        value++;
+        document.getElementById('number').value = value;
+    }
+</script>
+  </body>
+</html>
